@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(18, 18, 18);
+}
+
+/* .header-resim {
+    width: 200px;
+} */
+
+.header-yazi1 {
+    color: rgb(186, 186, 186);
+}
+.headeryazi2 {
+    color: rgb(153, 152, 152);
+
+}
+
+
+.social-giris ul li {
+    display: flex;
+
+}
+
+.social-giris ul li a {
+    opacity: 1;
+    transition: all 0.4s;
+    transform: scale(1);
+}
+
+.social-giris ul li a:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+
+.hakkimdayazi {
+    color: rgb(167, 164, 164);
+}
+
+.hakkimdaresim {
+    width: 200px;
+}
+
+.kisisel {
+    font-size: 16px;
+    color: rgb(153, 152, 152);
+}
+
+.egitim {
+    color: rgb(153, 152, 152);
+    background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)),  url("img/uni.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.yetenekler {
+    color: rgb(153, 152, 152);
+}
+
+html,body{
+    display: grid; ;
+   
+    
+}
+.skill-bars{
+   padding: 25px 30px;
+   width: 600px; 
+   box-shadow: 0px 5px 20px rgba(64, 61, 70, 0.233);
+   border-radius: 10px;  
+}
+.bar{ margin: 20px 0; }
+.bar:first-child{ margin-top: 0; }
+.info{ margin-bottom: 0; }
+.info span{
+    font-weight: 500;
+    font-size: 17px; opacity: 0;
+    animation: showText .5s 1s linear forwards;
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+.progress-line{
+    height: 10px; width: 100%;
+    background: #e7edfb; position: relative;
+    transform: scaleX(0); transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress-line span{
+    height: 100%; position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #262527;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress-line span::before{
+    position: absolute; content: "";
+    top:-10px; right: 0; height: 0;
+    width: 0; opacity: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #262527;
+    animation: showText2 .5s 1.5s linear forwards;
+}
+.progress-line span::after{
+    position: absolute; 
+    top:-28px; right: 0; font-weight: 500;
+    background: #262527;
+    color:#fff; opacity: 0;
+    padding: 1.5px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    animation: showText2 .5s 1.5s linear forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }    
+}
+.html span{ 
+    width: 60%; 
+}
+.css span{
+    width: 50%; 
+}
+.js span{
+    width: 30%; 
+}
+.php span{
+    width: 81%; 
+}
+.html span::after{
+    content: "60%"; 
+}
+.css span::after{
+    content: "50%"; 
+}
+.js span::after{
+    content: "30%"; 
+}
+.ing span{ 
+    width: 25%; 
+}
+.word span{
+    width: 65%; 
+}
+.excel span{
+    width: 60%; 
+}
+
+.ing span::after{
+    content: "25%"; 
+}
+.word span::after{
+    content: "65%"; 
+}
+.excel span::after{
+    content: "60%"; 
+}
+
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+}
+
+.skiller {
+    color: rgb(153, 152, 152);
+}
+
+
+.animation:before {
+    content: '';
+    background: #00000085;
+    width: 50%;
+    height: 50%;
+    display: block;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .3s linear;
+    
+}
+
+.animation:hover:before {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+    
+}
+
+.animation .img-title {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 15px;
+    opacity: 0;
+    color: white;
+    transition: all 0.3s linear;
+    
+}
+.animation:hover .img-title {
+    opacity: 1;
+    /* transform: translate(-50%, -50%) scale(1); */
+}
+
+.animation {
+    position: relative;
+}
+
